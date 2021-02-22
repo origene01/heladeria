@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width></device-width>, initial-scale=1.0">
+    <title>HELADERIA</title>
+    <link rel="stylesheet" href="1/14.css">
+</head>
+<body>
+    <section>
+        <div class="circulo"></div>
+        <header><a href="#" class="logo"><span>S</span>panuwey</a>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#" id="welcome">_Nosotros</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul></header>
+        <div class="contenedor">
+            <div class="textBox">
+                 <h2>Helado, rico<br>  helado <span>kody</span></h2>
+                 <p>Los mejores helado del mundo lo encontraras aqui, estan super ricos. <br>Esto es SPANUWEY la mejor heladeria del mundo que te brinda helados de calidad.</p>
+                 <a href="#" id="learn" onclick="leer()">Leer mas...</a>
+                 <span id="efecto">~</span>
+            </div>
+            
+            <div class="imgBox">
+            <img src="Imagenes/img1.png" alt="Helados-buenos" id="starbucks">
+            <!-- <img src="Imagenes/Helado dos.png" alt="">
+            <img src="Imagenes/Helado tres.png" alt=""> -->
+        </div>
+        
+        </div>
+        <ul class="thumb">
+            <li><img src="Imagenes/img1.png" alt=""
+                    onclick="imgSlider('Imagenes/img1.png'); cambiarColorCirculo('#FD006C')"></li>
+            <li><img src="Imagenes/img2.png" alt=""
+                    onclick="imgSlider('Imagenes/img2.png'); cambiarColorCirculo('#F9D9D6')"></li>
+            <li><img src="Imagenes/img3 (2).png  " alt=""
+                    onclick="imgSlider('Imagenes/img3 (2).png'); cambiarColorCirculo('#A52A2A')"></li>
+        </ul>
+        <ul class="redes">
+            <li><a href="#"><img src="Imagenes/Iconos/fb.png" alt=""></a></li>
+            <li><a href="#"><img src="Imagenes/Iconos/ig.png" alt=""></a></li>
+            <li><a href="#"><img src="Imagenes/Iconos/tw.png " alt=""></a></li>
+        </ul>
+    </section>
+
+    <script>
+ function leer() {
+     var btn = document.querySelector("#welcome");
+     var efectoSalida = document.querySelector("#efecto");
+           addEventListener('click', function(){
+              btn.style.padding ="3px";
+              setTimeout(() => {
+                   btn.style.borderRadius ="5px";
+                   btn. style.background ="brown";
+                    btn.style.color ="#fff";
+              }, 200);
+             
+              efectoSalida.style.fontSize ="15px";
+              efectoSalida.style.opacity ="1";
+              efectoSalida.style.background ="brown";
+              efectoSalida.style.top ="-200px";
+              efectoSalida.style.left ="990px"
+           });
+ }
+    
+    function imgSlider(anything){
+    document.querySelector("#starbucks").src = anything;
+    }
+
+    function cambiarColorCirculo(color){
+        var circulo = document.querySelector(".circulo");
+        circulo.style.background =color;
+        circulo.style.transition = "1s";
+    }
+    </script>
+</body>
+</html>

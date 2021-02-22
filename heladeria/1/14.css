@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+} 
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(231, 231, 231);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left : 0 ;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+     position: relative;
+     max-width: 80px;
+     font-size: 42px;
+     text-decoration: none;
+     color: rgb(255, 0, 234);
+     font-family: 'Courier New', Courier, monospace;
+     text-shadow:  2px 2px 20px rgb(255, 59, 59);
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    z-index: 1000;
+}
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 40px;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+header ul li a::first-letter{
+    color: brown;
+}
+
+header ul li a:hover{
+    border-bottom: 2px solid orange;
+}
+
+.contenedor{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.contenedor .textBox{
+    position: relative;
+    max-width: 600px;
+}
+
+.contenedor .textBox h2{
+    color: #333;
+    font-size: 4em;
+    line-height: 1.3em;
+    font-weight: 500;
+}
+
+.contenedor .textBox h2 span{
+    color: brown;
+    font-size: 1.3em;
+    font-weight: 900;
+}
+
+.contenedor .textBox p{
+    color: #333;
+}
+
+.contenedor .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: brown;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    z-index: 5;
+}
+
+.contenedor .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 40px;  
+}
+
+.contenedor .imgBox img{
+    max-width: 340px;
+    max-height: 450px;
+}
+
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin:  0 20px;
+    cursor: pointer; 
+    transition: 0.3s ease ;
+}
+.thumb li:hover{
+    transform: translateY(-15px) ;
+}
+.thumb li img{
+    max-width: 40px;
+}
+
+.redes{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.redes li{
+    list-style: none;
+}
+
+.redes li a{
+    display: inline-block;
+    background: #000;
+    border-radius: 50%;
+    opacity: .3;
+    margin: 5px 0;
+    transform: scale(0.6);
+    transition: .2s ease-in-out;
+}
+
+.redes li a:hover{
+    opacity: 1;
+    transform: scale(.70);
+}
+.circulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background-image: radial-gradient(circle at 47.83% 25.21%, #ff8540 0, #ff7150 10%, #ff5b5c 20%, #ff4465 30%, #ff2a6a 40%, #ff006c 50%, #e1006c 60%, #c6006b 70%, #ad006b 80%, #97006c 90%, #83006d 100%);
+    clip-path: circle(600px at right 800px);
+}
+
+#efecto{
+    z-index: 1;
+    top: 15em;
+    width: 30px;
+    left: 7em;
+    display: block;
+    transform: rotate(148deg);
+    position: absolute;
+    transition: .3s ease;
+    opacity: 0;
+}
